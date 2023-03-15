@@ -1,20 +1,11 @@
 import './AllPostPage.scss'
 // import postimg from '../resources/img/post_img.jpg'
 import authorImg from '../resources/img/autor.png'
-import { useDispatch, useSelector } from 'react-redux'
-import {postListFetching} from '../slices/slicePostList'
-import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 function AllPostsPage() {
     const {posts} = useSelector(state => state.postList)
-    // const dispatch = useDispatch()
-
-    // // useEffect(() => {
-    // //     dispatch(postListFetching())
-    // //     console.log(posts)
-    // // }, [])
-
     
     const renderPostItem = (data) => {
         
@@ -26,7 +17,7 @@ function AllPostsPage() {
                 postTitle,
                 postDescr,
                 banerImg,
-            } = item.desctiption
+            } = item.description
                 
             return(
                 <li className='post-item' key={id}>
