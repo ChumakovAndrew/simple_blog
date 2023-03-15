@@ -1,8 +1,22 @@
 import './AllPostPage.scss'
-import postimg from '../img/post_img.jpg'
-import autor from '../img/autor.png'
+import postimg from '../resources/img/post_img.jpg'
+import autor from '../resources/img/autor.png'
+import { useDispatch, useSelector } from 'react-redux'
+import {postListFetching} from '../slices/slicePostList'
+import { useEffect } from 'react'
 
 function AllPostsPage() {
+    const {posts, postsLoadingStatus} = useSelector(state => state.postList)
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(postListFetching())
+        console.log(posts)
+    }, [])
+
+    
+    console.log(postsLoadingStatus)
     return (
         <>
             <ul className='post-list'>

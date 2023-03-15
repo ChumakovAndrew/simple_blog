@@ -1,29 +1,9 @@
 import './PostPage.scss'
-import baner from '../img/post_img.jpg'
-import autor from '../img/autor.png'
+import baner from '../resources/img/post_img.jpg'
+import autor from '../resources/img/autor.png'
 
 
-const post = {
-    '1025i9935': {
-        desctiption: {
-            author: 'Post Autor',
-            date: '00.00.00',
-            postTitle: 'Post Title',
-            postDescr: 'Post Description',
-            banerImg: '#'
-        },
-        content: [
-            {
-                h4: 'Написать музыку — MuseNet',
-                p: 'В последние месяцы ChatGPT и Midjourney — лидеры по упоминаниям среди нейросетей. Но это не единственные инструменты, которые можно использовать для хобби и работы.'  
-            },
-            {
-                h4: 'Написать музыку — MuseNet',
-                p: 'В последние месяцы ChatGPT и Midjourney — лидеры по упоминаниям среди нейросетей. Но это не единственные инструменты, которые можно использовать для хобби и работы.'  
-            }
-        ]
-    }
-}
+
 
 
 
