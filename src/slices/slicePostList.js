@@ -1,15 +1,17 @@
 import {createSlice} from "@reduxjs/toolkit"
+import pimg from '../resources/img/post_img.jpg'
 
 const initialState = {
     postsLoadingStatus: 'idle',
-    posts: {
-        '10259935': {
+    posts: [
+        {
             desctiption: {
+                id: '10259935',
                 author: 'Post Autor',
                 date: '00.00.00',
                 postTitle: 'Post Title',
                 postDescr: 'Post Description',
-                banerImg: '#'
+                banerImg: pimg
             },
             content: [
                 {
@@ -22,13 +24,14 @@ const initialState = {
                 }
             ]
         },
-        '10259936': {
+        {
             desctiption: {
+                id: '10259939',
                 author: 'Post Autor',
                 date: '00.00.00',
                 postTitle: 'Post Title',
                 postDescr: 'Post Description',
-                banerImg: '#'
+                banerImg: pimg
             },
             content: [
                 {
@@ -41,13 +44,14 @@ const initialState = {
                 }
             ]
         },
-        '10259937': {
+        {
             desctiption: {
+                id: '10259931',
                 author: 'Post Autor',
                 date: '00.00.00',
                 postTitle: 'Post Title',
                 postDescr: 'Post Description',
-                banerImg: '#'
+                banerImg: pimg
             },
             content: [
                 {
@@ -59,8 +63,8 @@ const initialState = {
                     p: 'В последние месяцы ChatGPT и Midjourney — лидеры по упоминаниям среди нейросетей. Но это не единственные инструменты, которые можно использовать для хобби и работы.'  
                 }
             ]
-        }
-    }
+        },
+    ]
     
 }
 const postListSlice = createSlice({

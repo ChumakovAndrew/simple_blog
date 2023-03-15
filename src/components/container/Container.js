@@ -6,6 +6,7 @@ import './Container.scss';
 import Header from '../header/header';
 import AllPostsPage from '../../pages/AllPostsPage';
 import PostPage from '../../pages/PostPage';
+import { Suspense } from 'react';
 
 
 
@@ -18,10 +19,12 @@ function Container() {
                     <Header/>
                     <div className="container__wraper">
                         <div className='container__content'>
-                            <Routes>
-                                <Route path='/' element={<AllPostsPage/>}/>
-                                <Route path='/post' element={<PostPage/>}/>
-                            </Routes>
+                           <Suspense fallback={'loading'}>
+                                <Routes>
+                                    <Route path='/' element={<AllPostsPage/>}/>
+                                    <Route path='/post/:id' element={<PostPage/>}/>
+                                </Routes>
+                           </Suspense>
                         </div>
                     </div>
                 </div>
