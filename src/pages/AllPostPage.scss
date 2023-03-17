@@ -10,7 +10,10 @@
     &__title_h2 {
         margin-top: 10px;
         font-size: 32px;
-        
+        a{
+            text-decoration: none;
+            color: white;
+        }   
     }
 
     &__container-text{

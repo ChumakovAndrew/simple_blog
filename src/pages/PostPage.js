@@ -2,10 +2,9 @@ import './PostPage.scss'
 
 import autor from '../resources/img/autor.png'
 import { useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom';
-import { Fragment } from 'react';
+import { useParams } from 'react-router-dom'
+import { Fragment } from 'react'
 import {Events,scroller } from 'react-scroll'
-
 
 
 function PostPage() {
@@ -24,7 +23,7 @@ function PostPage() {
 
     const scrollToWithContainer = (index) => {
 
-        let goToContainer = new Promise((resolve, reject) => {
+        let goToContainer = new Promise((resolve) => {
     
           Events.scrollEvent.register('end', () => {
             resolve();

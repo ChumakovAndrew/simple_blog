@@ -3,12 +3,20 @@ import './AllPostPage.scss'
 import authorImg from '../resources/img/autor.png'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import useFireBaseServise from '../services/firebaseService'
+import { useEffect } from 'react'
 
 function AllPostsPage() {
     const {posts} = useSelector(state => state.postList)
+    const {getAllPosts} = useFireBaseServise()
     
+    useEffect(() => {
+        getAllPosts()
+    }, [])
+
     const renderPostItem = (data) => {
         
+      
         const items = data.map((item, i) => {
             const {
                 id,
