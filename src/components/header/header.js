@@ -1,4 +1,6 @@
 import './header.scss'
+import { Link } from 'react-router-dom'
+
 
 function Header() {
     return(
@@ -8,11 +10,7 @@ function Header() {
             </div>
             <nav className="header__navbar">
                 <ul className='header__nav'>
-                    <li className='nav_item'><a href='#' >JavaScript</a></li>
-                    <li className='nav_item'><a href='#' >React</a></li>
-                    <li className='nav_item'><a href='#' >Redux</a></li>
-                    <li className='nav_item'><a href='#' >HTML5</a></li>
-                    <li className='nav_item'><a href='#' >CSS</a></li>
+                    <li className='nav_item'><Link to='/'>Home</Link></li>
                 </ul>
             </nav>
             <div className="header__user"></div>
